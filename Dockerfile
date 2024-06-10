@@ -21,4 +21,4 @@ COPY . .
 # Specify the command to run the app using flask
 # CMD ["flask", "run", "--host", "0.0.0.0"] < ahora esto cambia por que usaremos gunicorn.
 
-CMD ["gunicorn", "--bind", "0.0.0.0:80", "app:create_app()"]
+CMD ["/bin/bash", "docker-entrypoint.sh"]
