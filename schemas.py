@@ -48,3 +48,6 @@ class UserSchema(Schema):
     id = fields.Int(dump_only=True)
     username = fields.Str(required=True)
     password = fields.Str(required=True) # el load only se usa por que nunca queremos devolver un password al usuario por seguridad.
+
+class UserRegisterSchema(UserSchema):
+    email = fields.Str(required=True)
